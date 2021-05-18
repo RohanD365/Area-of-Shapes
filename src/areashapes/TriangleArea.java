@@ -33,7 +33,12 @@ public class TriangleArea extends AreaShapes {
         // allow user to enter the a, b, anc c values of a standard equation
         Scanner input = new Scanner(System.in);
         
+        System.out.println("");
+        System.out.println("This will calculate the area of a triangle.");
+        
+        
         System.out.println("The value of the base and height must not be less than 0!");
+        System.out.println("");
         System.out.println("What is the base of the triangle.");
         
         while (true){
@@ -62,7 +67,7 @@ public class TriangleArea extends AreaShapes {
     }
     
     public void results (Object area){
-        
+        System.out.println("");
         System.out.println("The area of the triangle is " +this.findArea());
     }
     

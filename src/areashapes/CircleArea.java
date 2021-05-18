@@ -33,8 +33,12 @@ public class CircleArea extends AreaShapes {
         // allow user to enter the a, b, anc c values of a standard equation
         Scanner input = new Scanner(System.in);
         
+        System.out.println("");
+        System.out.println("This will calculate the area of a circle.");
+        
         System.out.println("The value of the radius not be less than 0!");
-        System.out.println("What is the radius of the triangle.");
+        System.out.println("");
+        System.out.println("What is the radius of the circle.");
         
         while (true){
           
@@ -53,6 +57,7 @@ public class CircleArea extends AreaShapes {
     }
     
     public void results (Object Area){
+        System.out.println("");
         System.out.println("The area of the circle is " +this.findArea());
     }
     
