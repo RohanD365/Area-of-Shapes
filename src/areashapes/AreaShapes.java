@@ -40,6 +40,7 @@ public class AreaShapes {
     public void userInput(){
         // allow user to enter the a, b, anc c values of a standard equation
         Scanner input = new Scanner(System.in);
+        System.out.println("This program will calculate the area of a few 2-D shapes");
         System.out.println("The value of the length and width must not be less than 0!");
         System.out.println("What is the length of the rectangle.");
         
