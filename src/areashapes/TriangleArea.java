@@ -5,18 +5,10 @@
  */
 package areashapes;
 
-import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
-
-
-public class AreaShapes {
-
-    double length;
-    double width;
-    double base;
-    double height;
-    double radius;
+public class TriangleArea extends AreaShapes {
     
     public double getValue(String instruction){
         // helper method to bullet proof and force user to enter a double value
@@ -40,22 +32,22 @@ public class AreaShapes {
     public void userInput(){
         // allow user to enter the a, b, anc c values of a standard equation
         Scanner input = new Scanner(System.in);
-        System.out.println("This program will calculate the area of a few 2-D shapes.");
-        System.out.println("The value of the length and width must not be less than 0!");
-        System.out.println("What is the length of the rectangle.");
+        
+        System.out.println("The value of the base and height must not be less than 0!");
+        System.out.println("What is the base of the triangle.");
         
         while (true){
           
-            this.length=getValue("L: ");
-            if (this.length > 0) break;
-            else System.out.println("The length must not be less than 0");
+            this.base=getValue("B: ");
+            if (this.base > 0) break;
+            else System.out.println("The base must not be less than 0");
         }
         
         while (true){
-            System.out.println("What is the width of the rectangle.");
-            this.width=getValue("W: ");
-            if (this.width > 0) break;
-            else System.out.println("The width must not be less than 0"); 
+            System.out.println("What is the height of the triangle.");
+            this.height=getValue("H: ");
+            if (this.height > 0) break;
+            else System.out.println("The height must not be less than 0"); 
             
             
         }    
@@ -65,26 +57,19 @@ public class AreaShapes {
     }
     
     public double findArea (){
-       return Math.round (length*width*100d)/100d; 
+       return Math.round (base*height/2*100d)/100d; 
         
     }
     
     public void results (Object area){
         
-        System.out.println("The area of the rectangle is " +this.findArea());
+        System.out.println("The area of the triangle is " +this.findArea());
     }
     
     
     
     
-    public static void main(String[] args) {
-        AreaShapes a1 = new AreaShapes();
-        a1.userInput();
-        a1.results(a1);
-        
-        TriangleArea a2 = new TriangleArea();
-        a2.userInput();
-        a2.results(a2);
-    }
+    
+    
     
 }
