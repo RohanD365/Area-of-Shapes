@@ -31,4 +31,28 @@ public class CircleArea extends AreaShapes {
         return val;
     }
     
+    public void userInput(){
+        // allow user to enter the a, b, anc c values of a standard equation
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("The value of the radius not be less than 0!");
+        System.out.println("What is the radius of the triangle.");
+        
+        while (true){
+          
+            this.radius=getValue("R: ");
+            if (this.radius > 0) break;
+            else System.out.println("The radius must not be less than 0.");
+        }
+        
+            
+            
+            
+            
+    }
+    
+    
+    
+    
+    
 }
