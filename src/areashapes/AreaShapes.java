@@ -85,6 +85,11 @@ public class AreaShapes {
         TriangleArea a2 = new TriangleArea();
         a2.userInput();
         a2.results(a2);
+        
+        CircleArea a3 = new CircleArea();
+        a3.userInput();
+        a3.results(a3);
+        
     }
     
 }

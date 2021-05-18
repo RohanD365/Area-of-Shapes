@@ -52,6 +52,10 @@ public class CircleArea extends AreaShapes {
         
     }
     
+    public void results (Object Area){
+        System.out.println("The area of the circle is " +this.findArea());
+    }
+    
     
     
     
