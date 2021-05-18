@@ -7,11 +7,9 @@ package areashapes;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import static java.lang.Math.*;
 
-/**
- *
- * @author rajdo
- */
+
 public class CircleArea extends AreaShapes {
     public double getValue(String instruction){
         // helper method to bullet proof and force user to enter a double value
@@ -45,11 +43,16 @@ public class CircleArea extends AreaShapes {
             else System.out.println("The radius must not be less than 0.");
         }
         
-            
-            
-            
+                  
             
     }
+    
+    public double findArea (){
+       return Math.round (PI*radius*radius*100d)/100d; 
+        
+    }
+    
+    
     
     
     
