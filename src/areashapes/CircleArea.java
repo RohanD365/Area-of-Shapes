@@ -30,7 +30,7 @@ public class CircleArea extends AreaShapes {
     }
     
     public void userInput(){
-        // allow user to enter the a, b, anc c values of a standard equation
+        // allow user to enter the radius to calculate the area of the circle
         Scanner input = new Scanner(System.in);
         
         System.out.println("");
@@ -43,7 +43,7 @@ public class CircleArea extends AreaShapes {
         while (true){
           
             this.radius=getValue("R: ");
-            if (this.radius > 0) break;
+            if (this.radius > 0) break;             // Will make sure the user enters a value greater than zero.
             else System.out.println("The radius must not be less than 0.");
         }
         
@@ -52,12 +52,12 @@ public class CircleArea extends AreaShapes {
     }
     
     public double findArea (){
-       return Math.round (PI*radius*radius*100d)/100d; 
+       return Math.round (PI*radius*radius*100d)/100d; // Method to calculate the area
         
     }
     
     public void results (Object Area){
-        System.out.println("");
+        System.out.println("");                         // Method to output the area
         System.out.println("The area of the circle is " +this.findArea());
     }
     
