@@ -14,7 +14,7 @@ public class AreaShapes {
 
     double length;
     double width;
-    double base;
+    double base;       // Variables that will be used for calculations
     double height;
     double radius;
     
@@ -38,7 +38,7 @@ public class AreaShapes {
     
     
     public void userInput(){
-        // allow user to enter the a, b, anc c values of a standard equation
+        // allow user to enter the length and the width of the rectangle
         Scanner input = new Scanner(System.in);
         System.out.println("This program will calculate the area of a few 2-D shapes.");
         System.out.println("Calculation for the area of a rectangle.");
@@ -51,7 +51,7 @@ public class AreaShapes {
         while (true){
           
             this.length=getValue("L: ");
-            if (this.length > 0) break;
+            if (this.length > 0) break;            // Will make sure the user enters a value greater than zero.
             else System.out.println("The length must not be less than 0");
         }
         
@@ -69,29 +69,29 @@ public class AreaShapes {
     }
     
     public double findArea (){
-       return Math.round (length*width*100d)/100d; 
+       return Math.round (length*width*100d)/100d; // Method to calculate the area
         
     }
     
-    public void results (Object area){
+    public void results (Object area){   // Method to output the area
         
-        System.out.println("");
-        System.out.println("The area of the rectangle is " +this.findArea());
+        System.out.println("");                       
+        System.out.println("The area of the rectangle is " +this.findArea());   
     }
     
     
     
     
     public static void main(String[] args) {
-        AreaShapes a1 = new AreaShapes();
+        AreaShapes a1 = new AreaShapes();   // create an object of class AreaShapes (This will call the constructor)
         a1.userInput();
         a1.results(a1);
         
-        TriangleArea a2 = new TriangleArea();
+        TriangleArea a2 = new TriangleArea(); // create an object of class TriangleArea
         a2.userInput();
         a2.results(a2);
         
-        CircleArea a3 = new CircleArea();
+        CircleArea a3 = new CircleArea();  // create an object of class CircleArea
         a3.userInput();
         a3.results(a3);
         
