@@ -36,7 +36,7 @@ public class CircleArea extends AreaShapes {
         System.out.println("");
         System.out.println("This will calculate the area of a circle.");
         
-        System.out.println("The value of the radius not be less than 0!");
+        System.out.println("The value of the radius must not be less than 0!");
         System.out.println("");
         System.out.println("What is the radius of the circle.");
         
